@@ -168,12 +168,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // View references
-        mMovieView = findViewById(R.id.movie) as MovieView
-        mScrollView = findViewById(R.id.scroll) as ScrollView
+        mMovieView = findViewById(R.id.movie)
+        mScrollView = findViewById(R.id.scroll)
 
         // Set up the video; it automatically starts.
         mMovieView.setMovieListener(mMovieListener)
-        findViewById(R.id.pip).setOnClickListener { minimize() }
+        findViewById<View>(R.id.pip).setOnClickListener { minimize() }
     }
 
     override fun onStop() {
